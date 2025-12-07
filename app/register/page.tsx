@@ -211,7 +211,7 @@ export default function RegisterPage() {
   }
 
   return (
-    <div className=" flex min-h-screen bg-gradient-to-b from-gray-50 to-white ">
+    <div className=" flex min-h-screen bg-gradient-to-b bg-white">
       {/* Left Side - Registration Content */}
       <div className="w-full lg:w-1/2 p-4 md:p-6 lg:p-8 overflow-y-auto">
         <div className="max-w-3xl mx-auto">
@@ -570,7 +570,7 @@ export default function RegisterPage() {
       </div>
 
       {/* Right Side - Image (Hidden on mobile, shown on large screens) */}
-      <div className="hidden lg:block lg:w-1/2 relative bg-gray-50">
+      <div className="hidden lg:block lg:w-1/2 relative bg-white">
         <div className="absolute inset-0">
           <Image
             src="/Group 350.svg"

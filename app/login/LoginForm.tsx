@@ -28,7 +28,7 @@ export default function LoginForm() {
   }
 
   return (
-    <Card className="border-none shadow-xl">
+    <Card className="border-none shadow-xl bg-white ">
       <CardHeader className=" space-y-1 pb-6">
         <Image 
           src="/neworkx-logo-blacktext (1) 1.png"
