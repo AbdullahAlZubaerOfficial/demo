@@ -376,38 +376,7 @@ export default function TrainersTable() {
           </div>
         </div>
 
-        {/* Quick Stats */}
-        <div className="mt-6 grid grid-cols-1 md:grid-cols-4 gap-4">
-          <div className="bg-gradient-to-r from-blue-50 to-blue-100 rounded-lg p-4">
-            <div className="text-2xl font-bold text-blue-700">{trainersData.length}</div>
-            <div className="text-sm font-medium text-gray-700">Total Trainers</div>
-            <div className="text-xs text-gray-500">All specializations</div>
-          </div>
-          
-          <div className="bg-gradient-to-r from-green-50 to-green-100 rounded-lg p-4">
-            <div className="text-2xl font-bold text-green-700">
-              {trainersData.filter(t => t.status === "Verified").length}
-            </div>
-            <div className="text-sm font-medium text-gray-700">Verified Trainers</div>
-            <div className="text-xs text-gray-500">Certified & active</div>
-          </div>
-          
-          <div className="bg-gradient-to-r from-purple-50 to-purple-100 rounded-lg p-4">
-            <div className="text-2xl font-bold text-purple-700">
-              {trainersData.reduce((sum, t) => sum + t.activeTrainings, 0)}
-            </div>
-            <div className="text-sm font-medium text-gray-700">Active Trainings</div>
-            <div className="text-xs text-gray-500">Currently running</div>
-          </div>
-          
-          <div className="bg-gradient-to-r from-amber-50 to-amber-100 rounded-lg p-4">
-            <div className="text-2xl font-bold text-amber-700">
-              {(trainersData.reduce((sum, t) => sum + t.rating, 0) / trainersData.length).toFixed(1)}
-            </div>
-            <div className="text-sm font-medium text-gray-700">Avg. Rating</div>
-            <div className="text-xs text-gray-500">Overall satisfaction</div>
-          </div>
-        </div>
+       
       </CardContent>
     </Card>
   )

@@ -415,46 +415,9 @@ export default function TraineesTable() {
           </div>
         </div>
 
-        {/* Quick Stats */}
-        <div className="mt-6 grid grid-cols-1 md:grid-cols-3 gap-4">
-          <div className="bg-gradient-to-r from-blue-50 to-blue-100 rounded-lg p-4">
-            <div className="text-2xl font-bold text-blue-700">{traineesData.length}</div>
-            <div className="text-sm font-medium text-gray-700">Total Trainees</div>
-            <div className="text-xs text-gray-500">All programs</div>
-          </div>
-          
-          <div className="bg-gradient-to-r from-green-50 to-green-100 rounded-lg p-4">
-            <div className="text-2xl font-bold text-green-700">
-              {traineesData.filter(t => t.status === "Completed").length}
-            </div>
-            <div className="text-sm font-medium text-gray-700">Completed</div>
-            <div className="text-xs text-gray-500">Successfully finished</div>
-          </div>
-          
-          <div className="bg-gradient-to-r from-purple-50 to-purple-100 rounded-lg p-4">
-            <div className="text-2xl font-bold text-purple-700">
-              {traineesData.filter(t => t.certificate === "issued").length}
-            </div>
-            <div className="text-sm font-medium text-gray-700">Certificates Issued</div>
-            <div className="text-xs text-gray-500">Verified & certified</div>
-          </div>
-        </div>
+      
 
-        {/* Program Distribution */}
-        <div className="mt-6 border rounded-lg p-4">
-          <h3 className="font-medium mb-3">Program Distribution</h3>
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-3">
-            {["Web Development", "Healthcare", "UI/UX", "Digital Marketing", "Cloud Computing"].map((program) => {
-              const count = traineesData.filter(t => t.programEnrolled === program).length
-              return (
-                <div key={program} className="bg-gray-50 rounded p-3 text-center">
-                  <div className="text-lg font-bold">{count}</div>
-                  <div className="text-xs text-gray-600 truncate">{program}</div>
-                </div>
-              )
-            })}
-          </div>
-        </div>
+      
       </CardContent>
     </Card>
   )

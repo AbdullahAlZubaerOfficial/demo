@@ -4,7 +4,7 @@ import StatsOverview from './components/StatsOverview'
 
 export default function TraineesPage() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-50 to-white">
+    <div className="min-h-screen bg-gradient-to-br bg-white">
       <div className="container mx-auto p-4 md:p-6">
         <DashboardHeader />
         

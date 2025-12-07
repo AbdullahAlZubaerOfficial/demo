@@ -4,7 +4,7 @@ import StatsOverview from './components/StatsOverview'
 
 export default function EmployersPage() {
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen bg-white">
       <div className="container mx-auto p-4 md:p-6">
         <DashboardHeader />
         
