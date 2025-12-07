@@ -350,7 +350,10 @@ export default function TrainersTable() {
                       <TableCell className="text-right">
                         <div className="flex justify-end gap-2">
                           <Button 
-                            ref={(el) => buttonRefs.current[employer.id] = el}
+                          ref={(el) => {
+  buttonRefs.current[employer.id] = el
+}}
+
                             variant="outline" 
                             size="sm"
                             onClick={() => window.open(employerUrl, '_blank')}

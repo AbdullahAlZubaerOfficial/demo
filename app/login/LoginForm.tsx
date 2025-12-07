@@ -98,6 +98,7 @@ export default function LoginForm() {
             </div>
           </div>
 
+          <Link href="/admin" >
           <Button
             type="submit"
             className="w-full h-12 bg-purple-700 hover:bg-purple-600 font-semibold text-lg"
@@ -105,6 +106,8 @@ export default function LoginForm() {
           >
             {isLoading ? "Signing in..." : "Log in"}
           </Button>
+          
+          </Link>
 
         </form>
       </CardContent>
