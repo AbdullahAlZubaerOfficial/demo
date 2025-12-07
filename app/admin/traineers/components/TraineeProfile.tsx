@@ -1,4 +1,3 @@
-"use client"
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
 import { Badge } from '@/components/ui/badge'
 import { Button } from '@/components/ui/button'
@@ -21,7 +20,8 @@ export default function TraineeProfile({ trainee }: TraineeProfileProps) {
           <div className="flex items-start justify-between">
             <div className="flex items-center gap-4">
               <div className="w-20 h-20 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full flex items-center justify-center text-white text-2xl font-bold">
-                {trainee.name.split(' ').map(n => n[0]).join('')}
+               {trainee.name.split(" ").map((n: string) => n[0]).join("")}
+
               </div>
               <div>
                 <h2 className="text-2xl font-bold">{trainee.name}</h2>
