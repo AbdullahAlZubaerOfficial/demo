@@ -60,28 +60,27 @@ const stats = [
 
 export default function StatsGrid() {
   return (
-    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 md:gap-4">
+    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
       {stats.map((stat, index) => {
         const Icon = stat.icon
         return (
-          <Card key={index} className="hover:shadow-sm transition-shadow">
-            <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2 px-4 pt-4 md:px-6 md:pt-6">
-              <CardTitle className="text-xs md:text-sm font-medium text-gray-600">
+          <Card key={index}>
+            <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
+              <CardTitle className="text-sm font-medium text-gray-600">
                 {stat.title}
               </CardTitle>
-              <div className={`${stat.bgColor} p-1.5 md:p-2 rounded-md md:rounded-lg`}>
-                <Icon className={`h-3 w-3 md:h-4 md:w-4 ${stat.color}`} />
+              <div className={`${stat.bgColor} p-2 rounded-lg`}>
+                <Icon className={`h-4 w-4 ${stat.color}`} />
               </div>
             </CardHeader>
-            <CardContent className="px-4 pb-4 md:px-6 md:pb-6">
-              <div className="text-xl md:text-2xl font-bold">{stat.value}</div>
-              <div className="flex flex-col md:flex-row md:items-center justify-between mt-2 md:mt-3 space-y-1 md:space-y-0">
+            <CardContent>
+              <div className="text-2xl font-bold">{stat.value}</div>
+              <div className="flex items-center justify-between mt-2">
                 <p className="text-xs text-gray-500">{stat.description}</p>
                 <div className="flex items-center text-xs font-medium text-green-600">
-                  <TrendingUp className="mr-1 h-2.5 w-2.5 md:h-3 md:w-3" />
+                  <TrendingUp className="mr-1 h-3 w-3" />
                   {stat.change}
-                  <span className="text-gray-500 ml-1 hidden sm:inline">from last month</span>
-                  <span className="text-gray-500 ml-1 sm:hidden">vs last month</span>
+                  <span className="text-gray-500 ml-1">from last month</span>
                 </div>
               </div>
             </CardContent>
